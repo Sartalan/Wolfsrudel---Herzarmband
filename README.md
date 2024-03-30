@@ -5,7 +5,7 @@
   
 ## ‣ **Diseño | Logo**
 + El brazalete estará hecho de tela -aún a elegir- y tendrá forrado el logo de un lobo, el cual es representativo de la empresa "Wolfsrudel".
-  Preferiblemente se buscará una tela flexible y con pocas capacidades de humedecerse (O ^ ~ ^ O)
+  Preferiblemente se buscará una tela flexible y con pocas capacidades de humedecerse           (O ^ ~ ^ O)
 
 ---
 
