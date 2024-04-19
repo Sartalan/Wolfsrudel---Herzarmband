@@ -23,6 +23,9 @@ function HomepageHeader() {
             Herzarmband - Blog 
           </Link>
         </div>
+        <div>
+          <img src="img/icon.jpg" alt="" className={styles.plantIcon} />
+        </div>
       </div>
     </header>
   );
@@ -32,8 +35,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={""}
+      description="Inicio de la Web">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
