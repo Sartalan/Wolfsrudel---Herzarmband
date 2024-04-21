@@ -22,8 +22,8 @@
 }
 
 .techIcon {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   transition: var(--tech-transition-off);
   text-decoration: none;
   color: inherit;
@@ -75,7 +75,7 @@
   text-align: center;
   user-select: none;
   font-family: Butterscotch;
-  font-size: 2rem;
+  font-size: 2.25rem;
   letter-spacing: 2px;
   font-weight: 200;
 }

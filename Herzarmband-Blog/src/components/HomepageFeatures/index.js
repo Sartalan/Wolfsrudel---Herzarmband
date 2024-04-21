@@ -16,7 +16,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.techSection}>
       <div className={styles.container}>
-        <h2 className={styles.techTitle}>Tecnologias Usadas:</h2>
+        <h2 className={styles.techTitle}>Tecnologias Usadas</h2>
         <hr className={styles.hr} />
         <div className="row">
           {IconsListOne.map((props, idx) => (
