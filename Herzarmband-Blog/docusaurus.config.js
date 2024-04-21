@@ -64,13 +64,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/icon.jpg',
       navbar: {
+        style: 'dark',
         title: 'Herzarmband',
-        logo: {
-          alt: 'Wolfsrudel Logo',
-          src: 'img/logo.svg',
-        },
+   
         items: [
           {
             type: 'docSidebar',
@@ -94,6 +92,10 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+      },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true
       },
     }),
 };

@@ -28,11 +28,6 @@ export default function HomepageFeatures() {
             <Feature key={idx} {...props} />
           ))}
         </div>
-        <div className="row">
-          {IconsListThree.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
       </div>
     </section>
   );
