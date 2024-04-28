@@ -1,20 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
-import { MyTabs } from './src/Main';
+import { MyTabs } from './src/main';
 import Constants from 'expo-constants';
+import { View } from 'react-native';
 
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <>
       <StatusBar
-        barStyle='light-content'
-        backgroundColor='#000'
+        style=''
+        backgroundColor='#fff'
+        translucent={false}
       />
-      <MyTabs style={{ marginTop: Constants.statusBarHeight }} />
-    </NavigationContainer>
+      <NavigationContainer >
+        <MyTabs />
+      </NavigationContainer>
+    </>
   );
 }
 
+console.log(StatusBar.currentHeight)
 
 
