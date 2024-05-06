@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/Wolfsrudel-Herzarmband/blog</id>
+    <title>Band | Project Blog</title>
+    <updated>2024-05-06T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://github.com/Wolfsrudel-Herzarmband/blog"/>
+    <subtitle>Band | Project Blog</subtitle>
+    <icon>https://github.com/Wolfsrudel-Herzarmband/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Inicio]]></title>
+        <id>https://github.com/Wolfsrudel-Herzarmband/blog/inicio</id>
+        <link href="https://github.com/Wolfsrudel-Herzarmband/blog/inicio"/>
+        <updated>2024-05-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Dentro de esta sección de la Web es donde tendremos nuestro el blog donde reportaremos en una serie de recorrido]]></summary>
+        <content type="html"><![CDATA[<p>Dentro de esta sección de la Web es donde tendremos nuestro el blog donde reportaremos en una serie de recorrido
+todos los problemas que se nos avecinen en el transcurso de la realización de nuestro proyecto.</p>]]></content>
+        <author>
+            <name>Alan Barrera</name>
+            <uri>https://github.com/sartalan</uri>
+        </author>
+        <category label="herzarmband" term="herzarmband"/>
+        <category label="project" term="project"/>
+        <category label="hola" term="hola"/>
+    </entry>
+</feed>

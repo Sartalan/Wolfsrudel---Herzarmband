@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Band | Project Blog</title>
+        <link>https://github.com/Wolfsrudel-Herzarmband/blog</link>
+        <description>Band | Project Blog</description>
+        <lastBuildDate>Mon, 06 May 2024 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>es</language>
+        <item>
+            <title><![CDATA[Inicio]]></title>
+            <link>https://github.com/Wolfsrudel-Herzarmband/blog/inicio</link>
+            <guid>https://github.com/Wolfsrudel-Herzarmband/blog/inicio</guid>
+            <pubDate>Mon, 06 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Dentro de esta sección de la Web es donde tendremos nuestro el blog donde reportaremos en una serie de recorrido]]></description>
+            <content:encoded><![CDATA[<p>Dentro de esta sección de la Web es donde tendremos nuestro el blog donde reportaremos en una serie de recorrido
+todos los problemas que se nos avecinen en el transcurso de la realización de nuestro proyecto.</p>]]></content:encoded>
+            <category>herzarmband</category>
+            <category>project</category>
+            <category>hola</category>
+        </item>
+    </channel>
+</rss>
