@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export function List() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}> Selector </Text>
+            <Text style={styles.text}> List </Text>
         </View>
     )
 }
