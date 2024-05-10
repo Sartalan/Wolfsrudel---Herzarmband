@@ -1,5 +1,13 @@
 import { StyleSheet } from "react-native";
 
+const profileSize = 150
+const profileBorder = 1
+const profileRadius = 150
+//---
+const buttonSize = (profileSize/9)
+//---
+const nameSize = 50
+
 export const HomeStyles = StyleSheet.create({
     //? Container = All the HomeScreen style (its width, height, etc)
 
@@ -13,24 +21,24 @@ export const HomeStyles = StyleSheet.create({
     profileContainer: {
         alignItems: 'center',
         position: 'relative',
-        padding: 20,
+        padding: 50,
 
     },
 
     profile: {
-        width: 250,
-        height: 250,
+        width: profileSize,
+        height: profileSize,
     },
 
     //todo --------------------------------
     //*------------------------------------
 
     image: {
-        width: 250,
-        height: 250,
-        borderRadius: 150,
+        width: profileSize,
+        height: profileSize,
+        borderRadius: profileRadius,
         borderColor: '#fff',
-        borderWidth: 1,
+        borderWidth: profileBorder,
         position: 'absolute',
         top: '0',
         right: '0',
@@ -40,10 +48,10 @@ export const HomeStyles = StyleSheet.create({
     },
 
     falseImage: {
-        width: 250,
-        height: 250,
-        borderWidth: 1,
-        borderRadius: 150,
+        width: profileSize,
+        height: profileSize,
+        borderWidth: profileBorder,
+        borderRadius: profileRadius,
         borderColor: '#fff',
         position: 'absolute',
         top: '0',
@@ -55,7 +63,7 @@ export const HomeStyles = StyleSheet.create({
     //*------------------------------------
 
     button: {
-        padding: 25,
+        padding: buttonSize,
         position: 'absolute',
         bottom: 0,
         right: 0,
@@ -65,7 +73,7 @@ export const HomeStyles = StyleSheet.create({
     name: {
         padding: 25,
         color: '#fff',
-        fontSize: 50,
+        fontSize: nameSize,
         fontFamily: 'sans-serif'
     }
 //? OTHER SECTION
