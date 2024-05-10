@@ -1,10 +1,19 @@
-import { StyleSheet, Button, Image, View } from 'react-native';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { HomeStyles } from '../styles/HomeStyle'
 import { useState } from 'react';
 
 import * as ImagePicker from 'expo-image-picker';
 
+const noImage = () => {
+  return (
+    <View style={HomeScreen.image}>
+
+    </View>
+  )
+}
+
 export function HomeScreen() {
-    const [image, setImage] = useState(null);
+  const [image, setImage] = useState(null);
 
   const pickImage = async () => {
     // No permissions request is necessary for launching the image library
@@ -15,29 +24,31 @@ export function HomeScreen() {
       quality: 1,
     });
 
+
+
     console.log(result);
+    console.log(setImage)
+
 
     if (!result.canceled) {
       setImage(result.assets[0].uri);
     }
   };
-    return (
-        <View style={styles.container}>
-        <Button title="Pick an image from camera roll" onPress={pickImage} />
-        {image && <Image source={{ uri: image }} style={styles.image} />}
+  return (
+    <View style={HomeStyles.container}>
+      <View style={HomeStyles.profileContainer}>
+        <View style={HomeStyles.profile}>
+
+          <View style={HomeStyles.falseImage}/>
+          {image && <Image source={{ uri: image }} style={HomeStyles.image} />}          
+
+          <TouchableOpacity style={HomeStyles.button} onPress={pickImage}>
+
+          </TouchableOpacity>
+        </View>
+        <Text style={HomeStyles.name}>Alan</Text>
       </View>
-    )
+    </View>
+  )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#000"
-      },
-      image: {
-        width: 200,
-        height: 200,
-      },
-});
