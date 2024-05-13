@@ -1,17 +1,18 @@
 import { View } from 'react-native';
 import { HomeStyles } from '../styles/HomeStyle'
 import { Profile } from '../components/Profile'
-import { HeartRate } from '../components/HeartRate'
+import { Connection } from '../components/Connection'
 
 export function HomeScreen() {
 
   return (
     <>
-      <View style={HomeStyles.container}>
+      <View style={HomeStyles.PROFILE_CONTAINER}>
         <Profile />
       </View>
-      <View style={HomeStyles.containerTwo}>
-        <HeartRate />
+
+      <View style={HomeStyles.CONNECTION_CONTAINER}>
+        <Connection />
       </View>
     </>
   )

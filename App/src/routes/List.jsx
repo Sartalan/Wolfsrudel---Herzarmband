@@ -20,3 +20,16 @@ const styles = StyleSheet.create({
         fontSize: 50
     }
 });
+
+/*
+
+ <TouchableOpacity 
+        style={HomeStyles.heartContainer}>
+            <Image
+                style={HomeStyles.heart}
+                source={require('../../assets/heart.png')}
+            />
+            <Text style={HomeStyles.heartText}>Heartbeat</Text>
+        </TouchableOpacity>
+
+*/

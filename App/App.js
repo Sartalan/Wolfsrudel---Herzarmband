@@ -10,7 +10,7 @@ export default function App() {
         backgroundColor='#000'
         translucent={false}
       />
-      <NavigationContainer >
+      <NavigationContainer style={{backgroundColor: '#000'}} >
         <MyTabs />
       </NavigationContainer>
     </>
