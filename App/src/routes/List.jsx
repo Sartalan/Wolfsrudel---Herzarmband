@@ -1,36 +1,41 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
+import { ListItem } from '../components/ListItem';
+const heartBeatIcon = '../../assets/heart.png'
 
 export function List() {
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}> List </Text>
-        </View>
+        <ScrollView
+            contentContainerStyle={{
+                justifyContent: 'space-around',
+                alignItems: 'center',
+                gap: 50,
+                padding: 25,
+            }}
+            style={ListStyles.list}>
+            <ListItem style={ListStyles.item}
+                name={'Heartbeat'}
+                source={require(heartBeatIcon)}
+            />
+             <ListItem style={ListStyles.item}
+                name={'daw'}
+                source={require(heartBeatIcon)}
+            />
+        </ScrollView>
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#000',
-        alignItems: 'center',
-        justifyContent: 'center',
+const ListStyles = StyleSheet.create({
+    list: {
+        backgroundColor: '#000'
     },
-    text: {
-        color: '#fff',
-        fontSize: 50
+    item: {
+
     }
 });
 
 /*
 
- <TouchableOpacity 
-        style={HomeStyles.heartContainer}>
-            <Image
-                style={HomeStyles.heart}
-                source={require('../../assets/heart.png')}
-            />
-            <Text style={HomeStyles.heartText}>Heartbeat</Text>
-        </TouchableOpacity>
+
 
         backgroundColor: '#74F2CE',
 

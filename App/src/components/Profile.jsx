@@ -1,7 +1,7 @@
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
 import { useFonts } from "expo-font";
-import { Image, Text, TouchableOpacity, View, StyleSheet } from 'react-native';
+import { Image, Text, TouchableOpacity, View, StyleSheet, Dimensions } from 'react-native';
 
 
 export function Profile() {
@@ -57,6 +57,7 @@ const profileRadius = 150
 const buttonSize = (profileSize / 9)
 //---
 const nameSize = 40
+const deviceWidth = Dimensions.get('window').width;
 const ProfileStyle = StyleSheet.create({
     container: {
         alignItems: 'center',
@@ -109,7 +110,9 @@ const ProfileStyle = StyleSheet.create({
         padding: 25,
         color: '#fff',
         fontSize: nameSize,
-        fontFamily: 'Butterscotch'
+        fontFamily: 'Butterscotch',
+        width:deviceWidth ,
+        textAlign: 'center'
     },
 
     hr: {
