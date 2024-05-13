@@ -47,6 +47,9 @@ export function Profile() {
     )
 }
 
+//TODO: ALL THE DESIGN
+//TODO: ---------------------------
+
 const profileSize = 150
 const profileBorder = 2.5
 const profileRadius = 150

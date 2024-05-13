@@ -32,4 +32,7 @@ const styles = StyleSheet.create({
             <Text style={HomeStyles.heartText}>Heartbeat</Text>
         </TouchableOpacity>
 
+        backgroundColor: '#74F2CE',
+
+
 */

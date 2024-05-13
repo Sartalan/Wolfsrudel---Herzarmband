@@ -1,29 +1,33 @@
-import { Text, TouchableOpacity, View, StyleSheet } from 'react-native'
+import { Text, TouchableOpacity, View, StyleSheet, Image } from 'react-native'
 import {Dimensions} from 'react-native';
 
 import { useState } from 'react'
 
 export function Connection() {
 
+    const [connection, setConnection ] = useState('Disconnected ●︿●')
 
+    function press() {
+            setConnection(connection === 'Disconnected ●︿●' ? 'Connected ( ͡° ͜ʖ ͡°)' : 'Disconnected ●︿●')
 
-    const [open, close] = useState(close)
-    console.log(open)
+    }
+
 
     return (
         <>
             <View style={ConnectionStyle.connectionContainer}>
-                <Text style={ConnectionStyle.connectionText}>Disconnected</Text>
+                <Text style={ConnectionStyle.connectionText}>{connection}</Text>
             </View>
             
-            <TouchableOpacity style={ConnectionStyle.connectionButton}>
-
+            <TouchableOpacity style={ConnectionStyle.connectionButton} onPress={press} >
+                <Image style={ConnectionStyle.bleImage} source={require('../../assets/bluetooth.png')}/>
             </TouchableOpacity>
         </>
     )
 }
 
 //TODO: ALL THE DESIGN
+//TODO: ---------------------------
 
 const deviceWidth = Dimensions.get('window').width;
 const connectionButtonRadius = 30;
@@ -38,24 +42,24 @@ const ConnectionStyle = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
     },
-    heart: {
-        width: 100,
-        height: 100,
-    },
-
+    
     connectionText: {
-        fontSize: 40,
-        letterSpacing: 2.5,
-        fontFamily: 'Butterscotch'
+        fontSize: 30,
+        fontWeight: 'bold',
+        fontFamily: 'console'
     },
 
     connectionButton: {
-
-        height: 75,
+        padding: 10,
         backgroundColor: '#fff',
-        bottom: 0,
+        justifyContent: 'center',
+        alignItems: 'center',
         borderTopRightRadius: connectionButtonRadius,
         borderTopLeftRadius: connectionButtonRadius,
         width: deviceWidth
+    },
+    bleImage: {
+        width: 75,
+        height: 75,
     }
 })

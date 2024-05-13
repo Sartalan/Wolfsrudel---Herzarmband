@@ -18,6 +18,7 @@ export function MyTabs() {
             screenOptions={{
                 tabBarShowIcon: true,
                 tabBarShowLabel: false,
+                tabBarIndicatorStyle: {backgroundColor: '#74F2CE'},
                 tabBarActiveTintColor: '#ffffff',
                 tabBarIconStyle: { width: 50, height: 50 },
                 tabBarStyle: { backgroundColor: '#000' },
