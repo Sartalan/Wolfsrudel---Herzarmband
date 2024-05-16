@@ -1,12 +1,27 @@
-#include <Arduino.h>
+/*
+  Minimal Esp32 Websockets Server
+
+  This sketch:
+        1. Connects to a WiFi network
+        2. Starts a websocket server on port 80
+        3. Waits for connections
+        4. Once a client connects, it wait for a message from the client
+        5. Sends an "echo" message to the client
+        6. closes the connection and goes back to step 3
+
+  Hardware:
+        For this sketch you only need an ESP32 board.
+
+  Created 15/02/2019
+  By Gil Maimon
+  https://github.com/gilmaimon/ArduinoWebsockets
+*/
+
 #include <ArduinoWebsockets.h>
 #include <WiFi.h>
 
-//TP-LINK_3C90
-//yBxwCV3AryoFqJ8RHfYU
-
-const char* ssid = "Estudiantes"; //Enter SSID
-const char* password = "educar_2018"; //Enter Password
+const char* ssid = "ssid"; //Enter SSID
+const char* password = "password"; //Enter Password
 
 using namespace websockets;
 
@@ -42,18 +57,10 @@ void loop() {
     Serial.println(msg.data());
 
     // return echo
-    // client.send("Echo: " + msg.data());
-    delay(1000);
+    client.send("Echo: " + msg.data());
 
-    if (msg.data() == "fc"){
-
-      for(int i = 1; i <= 10; i++) {
-      String numeroStr = String(i);
-      client.send(numeroStr);
-      }
-    }
-
-    
+    // close the connection
+    client.close();
   }
   
   delay(1000);
