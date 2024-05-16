@@ -13,11 +13,11 @@ export function List() {
             }}
             style={ListStyles.list}>
             <ListItem style={ListStyles.item}
-                name={'Heartbeat'}
+                name={'Frecuencia'}
                 source={require(heartBeatIcon)}
             />
-             <ListItem style={ListStyles.item}
-                name={'daw'}
+            <ListItem style={ListStyles.item}
+                name={'Tensión'}
                 source={require(heartBeatIcon)}
             />
         </ScrollView>
@@ -32,12 +32,3 @@ const ListStyles = StyleSheet.create({
 
     }
 });
-
-/*
-
-
-
-        backgroundColor: '#74F2CE',
-
-
-*/
