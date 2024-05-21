@@ -1,26 +1,40 @@
-import { Text, TouchableOpacity, View, StyleSheet, Image } from 'react-native'
-import {Dimensions} from 'react-native';
+import { Text, TouchableOpacity, View, StyleSheet, Image, Modal } from 'react-native'
+import { Dimensions } from 'react-native';
 
 import { useState } from 'react'
 
 export function Connection() {
 
-    const [connection, setConnection ] = useState('Disconnected ●︿●')
+    //  const [connection, setConnection ] = useState('Disconnected ●︿●')
+    const [modal, setModal] = useState(false)
 
     function press() {
-            setConnection(connection === 'Disconnected ●︿●' ? 'Connected ( ͡° ͜ʖ ͡°)' : 'Disconnected ●︿●')
-
+        // setConnection(connection === 'Disconnected ●︿●' ? 'Connected ( ͡° ͜ʖ ͡°)' : 'Disconnected ●︿●')
+        setModal(modal == true ? false : true)
+        console.log(modal)
     }
-
 
     return (
         <>
+            <Modal
+                animationType='fade'
+                transparent={true}
+                visible={modal == true}>
+                <View style={ConnectionStyle.modalContent}>
+                    <TouchableOpacity
+                        onPress={press}
+                        style={ConnectionStyle.modalExitButton}
+                    />
+                    <Text style={{ color: '#fff', fontSize: 100 }}>dswad</Text>
+                </View>
+            </Modal>
+
             <View style={ConnectionStyle.connectionContainer}>
-                <Text style={ConnectionStyle.connectionText}>{connection}</Text>
+                <Text style={ConnectionStyle.connectionText}>dawdwa</Text>
             </View>
-            
+
             <TouchableOpacity style={ConnectionStyle.connectionButton} onPress={press} >
-                <Image style={ConnectionStyle.bleImage} source={require('../../assets/bluetooth.png')}/>
+                <Image style={ConnectionStyle.bleImage} source={require('../../assets/bluetooth.png')} />
             </TouchableOpacity>
         </>
     )
@@ -42,7 +56,7 @@ const ConnectionStyle = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
     },
-    
+
     connectionText: {
         fontSize: 30,
         fontWeight: 'bold',
@@ -61,5 +75,21 @@ const ConnectionStyle = StyleSheet.create({
     bleImage: {
         width: 75,
         height: 75,
+    },
+
+    //? MODAL
+
+    modalContent: {
+        margin: 25,
+        flex: 1,
+        backgroundColor: 'red',
+        borderRadius: 10,
+    },
+
+    modalExitButton: {
+        width: 50,
+        height: 50,
+        borderRadius: 10,
+        backgroundColor: 'blue'
     }
 })

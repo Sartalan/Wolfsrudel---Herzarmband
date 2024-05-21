@@ -1,25 +1,27 @@
 
-import { useState } from 'react'
-import { TouchableOpacity, Image, Text, StyleSheet, View } from 'react-native'
+import { useState, useEffect } from 'react'
+import { TouchableOpacity, Image, Text, StyleSheet, View} from 'react-native'
 
-var ws = new WebSocket('ws://10.0.10.133');
+
+var ws = new WebSocket('ws://10.0.5.7:8080');
 
 ws.onopen = () => {
     // connection opened
     ws.send('fc');  // send a message
-  };
+};
 
-  ws.onmessage = (e) => {
+ws.onmessage = (e) => {
     // a message was received
     console.log(e.data);
-  };
-  
-
-
+};
 
 export function ListItem({ name, source }) {
 
     const [view, setView] = useState(false)
+
+    useEffect(() => {
+        console.log("Me rendericé")
+    }, [])
 
     function touch() {
         console.log('Presione Touch')

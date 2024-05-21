@@ -1,8 +1,9 @@
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, TextInput } from 'react-native';
 import { ListItem } from '../components/ListItem';
 const heartBeatIcon = '../../assets/heart.png'
 
 export function List() {
+
     return (
         <ScrollView
             contentContainerStyle={{
@@ -20,11 +21,20 @@ export function List() {
                 name={'Tensión'}
                 source={require(heartBeatIcon)}
             />
+
         </ScrollView>
     )
 }
 
 const ListStyles = StyleSheet.create({
+    input: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+        backgroundColor: '#fff'
+    },
+
     list: {
         backgroundColor: '#000'
     },
