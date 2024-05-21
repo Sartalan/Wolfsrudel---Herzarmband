@@ -11,24 +11,29 @@ export function Connection() {
     function press() {
         // setConnection(connection === 'Disconnected ●︿●' ? 'Connected ( ͡° ͜ʖ ͡°)' : 'Disconnected ●︿●')
         setModal(modal == true ? false : true)
-        console.log(modal)
+        console.log(modal == true ? 'Cerre el modal' : 'Abrí el modal')
     }
 
     return (
         <>
+            {
+                //?---Modal Zone------
+            }
             <Modal
                 animationType='fade'
                 transparent={true}
                 visible={modal == true}>
-                <View style={ConnectionStyle.modalContent}>
+                <View style={ModalStyle.modalContent}>
                     <TouchableOpacity
                         onPress={press}
-                        style={ConnectionStyle.modalExitButton}
+                        style={ModalStyle.modalExitButton}
                     />
-                    <Text style={{ color: '#fff', fontSize: 100 }}>dswad</Text>
+                    <Text style={ModalStyle.modalText}>dswad</Text>
                 </View>
             </Modal>
-
+            {
+                //?---------------
+            }
             <View style={ConnectionStyle.connectionContainer}>
                 <Text style={ConnectionStyle.connectionText}>dawdwa</Text>
             </View>
@@ -77,8 +82,9 @@ const ConnectionStyle = StyleSheet.create({
         height: 75,
     },
 
-    //? MODAL
-
+})
+//? ---------- MODAL --------------
+const ModalStyle = StyleSheet.create({
     modalContent: {
         margin: 25,
         flex: 1,
@@ -91,5 +97,9 @@ const ConnectionStyle = StyleSheet.create({
         height: 50,
         borderRadius: 10,
         backgroundColor: 'blue'
+    },
+    modalText: {
+        fontSize: 100,
+        color: '#fff'
     }
 })

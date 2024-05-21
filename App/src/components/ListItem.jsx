@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react'
 import { TouchableOpacity, Image, Text, StyleSheet, View} from 'react-native'
 
-
 var ws = new WebSocket('ws://10.0.5.7:8080');
 
 ws.onopen = () => {
