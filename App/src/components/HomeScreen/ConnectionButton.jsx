@@ -1,9 +1,12 @@
 import { Text, TouchableOpacity, View, StyleSheet, Image, Modal } from 'react-native'
+import { WSConnection } from './ConnectionComponents/WSConnection';
+import { BLEConnection } from './ConnectionComponents/BLEConnection';
 import { Dimensions } from 'react-native';
+const Icon = '../../../assets/bluetooth.png'
 
 import { useState } from 'react'
 
-export function Connection() {
+export function ConnectionButton() {
 
     //  const [connection, setConnection ] = useState('Disconnected ●︿●')
     const [modal, setModal] = useState(false)
@@ -28,18 +31,22 @@ export function Connection() {
                         onPress={press}
                         style={ModalStyle.modalExitButton}
                     />
-                    <Text style={ModalStyle.modalText}>dswad</Text>
+                    <View style={ModalStyle.modalWifiContent}>
+                        <View style={ModalStyle.modalHr} />
+                        <WSConnection />
+                        <BLEConnection />
+                    </View>
                 </View>
             </Modal>
             {
                 //?---------------
             }
             <View style={ConnectionStyle.connectionContainer}>
-                <Text style={ConnectionStyle.connectionText}>dawdwa</Text>
+                <Text style={ConnectionStyle.connectionText}>Connected</Text>
             </View>
 
             <TouchableOpacity style={ConnectionStyle.connectionButton} onPress={press} >
-                <Image style={ConnectionStyle.bleImage} source={require('../../assets/bluetooth.png')} />
+                <Image style={ConnectionStyle.bleImage} source={require(Icon)} />
             </TouchableOpacity>
         </>
     )
@@ -65,7 +72,6 @@ const ConnectionStyle = StyleSheet.create({
     connectionText: {
         fontSize: 30,
         fontWeight: 'bold',
-        fontFamily: 'console'
     },
 
     connectionButton: {
@@ -83,12 +89,16 @@ const ConnectionStyle = StyleSheet.create({
     },
 
 })
-//? ---------- MODAL --------------
 const ModalStyle = StyleSheet.create({
+
+    //? ---------- MODAL --------------
+
+
     modalContent: {
         margin: 25,
+        padding: 10,
         flex: 1,
-        backgroundColor: 'red',
+        backgroundColor: '#293241',
         borderRadius: 10,
     },
 
@@ -96,10 +106,21 @@ const ModalStyle = StyleSheet.create({
         width: 50,
         height: 50,
         borderRadius: 10,
-        backgroundColor: 'blue'
+        backgroundColor: 'white'
     },
-    modalText: {
-        fontSize: 100,
-        color: '#fff'
-    }
+
+    modalWifiContent: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    modalHr: {
+        width: 150,
+        margin: 10,
+        height: 2,
+        backgroundColor: '#fff',
+        opacity: .25,
+    },
 })
+
+

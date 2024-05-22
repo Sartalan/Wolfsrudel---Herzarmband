@@ -1,26 +1,15 @@
 
 import { useState, useEffect } from 'react'
-import { TouchableOpacity, Image, Text, StyleSheet, View} from 'react-native'
+import { TouchableOpacity, Image, Text, StyleSheet, View } from 'react-native'
 
-var ws = new WebSocket('ws://10.0.5.7:8080');
 
-ws.onopen = () => {
-    // connection opened
-    ws.send('fc');  // send a message
-};
-
-ws.onmessage = (e) => {
-    // a message was received
-    console.log(e.data);
-};
 
 export function ListItem({ name, source }) {
 
     const [view, setView] = useState(false)
+    const [fc, setFc] = useState(1)
 
-    useEffect(() => {
-        console.log("Me rendericé")
-    }, [])
+
 
     function touch() {
         console.log('Presione Touch')
@@ -29,17 +18,42 @@ export function ListItem({ name, source }) {
     }
 
     function Object() {
+
+
         if (view == true) {
-            console.log('rojo')
+
+            var ws = new WebSocket('ws://10.0.5.7:8080');
+
+            ws.onopen = () => {
+                // connection opened
+                function sendData() {
+                    ws.send('fc');  // send a message
+                }
+
+                setInterval(sendData, 5000)
+            };
+
+            ws.onmessage = (e) => {
+
+                function fcData() {
+                    setFc(e.data)
+                }
+
+                setInterval(fcData, 5000)
+
+                console.log(fc);
+            };
+
+            console.log('Activo')
             return (
                 <View style={ItemStyle.otherView}>
-                    <Text style={ItemStyle.otherText}>60</Text>
+                    <Text style={ItemStyle.text}>{fc}</Text>
                 </View>
             )
         }
 
         else {
-            console.log('azul')
+            console.log('Inactivo')
             return (
                 <>
                     <Image
@@ -86,7 +100,6 @@ const ItemStyle = StyleSheet.create({
     text: {
         fontSize: 30,
         fontWeight: 'bold',
-        fontFamily: 'console'
     },
 
     otherView: {

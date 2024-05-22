@@ -1,7 +1,7 @@
 import { View } from 'react-native';
 import { HomeStyles } from '../styles/HomeStyle'
-import { Profile } from '../components/Profile'
-import { Connection } from '../components/Connection'
+import { Profile } from '../components/HomeScreen/Profile.jsx'
+import { ConnectionButton } from '../components/HomeScreen/ConnectionButton.jsx'
 
 export function HomeScreen() {
 
@@ -12,7 +12,7 @@ export function HomeScreen() {
       </View>
 
       <View style={HomeStyles.CONNECTION_CONTAINER}>
-        <Connection />
+        <ConnectionButton />
       </View>
     </>
   )

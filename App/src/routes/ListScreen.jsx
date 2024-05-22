@@ -1,8 +1,8 @@
-import { ScrollView, StyleSheet, TextInput } from 'react-native';
-import { ListItem } from '../components/ListItem';
+import { ScrollView, StyleSheet } from 'react-native';
+import { ListItem } from '../components/ListScreen/ListItem';
 const heartBeatIcon = '../../assets/heart.png'
 
-export function List() {
+export function ListScreen() {
 
     return (
         <ScrollView

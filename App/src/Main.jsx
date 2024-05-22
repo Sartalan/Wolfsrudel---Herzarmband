@@ -1,8 +1,8 @@
 
+import { Image } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { HomeScreen } from './routes/HomeScreen'
-import { Image } from 'react-native'
-import { List } from './routes/List'
+import { ListScreen } from './routes/ListScreen'
 const UserIcon = '../assets/icons/user.png'
 const ListIcon = '../assets/icons/list.png'
 const sizeIcons = 40;
@@ -26,8 +26,7 @@ export function MyTabs() {
 
         >
 
-            <Tab.Screen name="Home"
-                component={HomeScreen}
+            <Tab.Screen name="Home" component={HomeScreen}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <Image
@@ -37,7 +36,7 @@ export function MyTabs() {
                     )
                 }}
             />
-            <Tab.Screen name="List" component={List} 
+            <Tab.Screen name="List" component={ListScreen} 
              options={{
                 tabBarIcon: ({ color }) => (
                     <Image

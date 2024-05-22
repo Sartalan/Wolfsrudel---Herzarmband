@@ -7,7 +7,7 @@ import { Image, Text, TouchableOpacity, View, StyleSheet, Dimensions } from 'rea
 export function Profile() {
 
     useFonts({
-        "Butterscotch": require("../../assets/fonts/butterscotch/Butterscotch.otf"),
+        "Butterscotch": require("../../../assets/fonts/butterscotch/Butterscotch.ttf"),
     });
 
 
