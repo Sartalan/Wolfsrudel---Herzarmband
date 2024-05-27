@@ -12,6 +12,8 @@ function Feature({ Svg, title, url }) {
   );
 }
 
+
+
 export default function HomepageFeatures() {
   return (
     <section className={styles.techSection}>

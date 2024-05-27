@@ -1,7 +1,7 @@
 ---
 slug: inicio
 title: Inicio
-authors: [slorber]
+authors: [Alan]
 tags: [herzarmband, project, hola]
 ---
 
