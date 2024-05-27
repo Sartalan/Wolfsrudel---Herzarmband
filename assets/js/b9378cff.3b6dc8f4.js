@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkherzarmband_blog=self.webpackChunkherzarmband_blog||[]).push([[377],{9728:a=>{a.exports=JSON.parse('{"label":"pcb","permalink":"/Wolfsrudel-Herzarmband/blog/tags/pcb","allTagsPath":"/Wolfsrudel-Herzarmband/blog/tags","count":1,"unlisted":false}')}}]);

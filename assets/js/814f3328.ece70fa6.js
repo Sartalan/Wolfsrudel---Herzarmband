@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkherzarmband_blog=self.webpackChunkherzarmband_blog||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Inicio","permalink":"/Wolfsrudel-Herzarmband/blog/inicio","unlisted":false}]}')}}]);
