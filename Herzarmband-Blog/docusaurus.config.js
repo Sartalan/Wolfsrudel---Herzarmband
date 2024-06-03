@@ -4,10 +4,11 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  plugins: ['docusaurus-plugin-sass'],
   title: 'Band | Project',
   tagline: 'Un recorrido general del Proyecto',
   favicon: 'img/favicon.ico',
@@ -68,7 +69,7 @@ const config = {
       navbar: {
         style: 'dark',
         title: 'Herzarmband',
-   
+
         items: [
           {
             type: 'docSidebar',
@@ -76,7 +77,7 @@ const config = {
             position: 'left',
             label: 'Proyecto',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/Sartalan/Wolfsrudel-Herzarmband',
             label: 'GitHub',
@@ -86,7 +87,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-      
+
         copyright: `Copyright © ${new Date().getFullYear()} Our Herzarmband Project by Wolfsrudel.`,
       },
       prism: {
@@ -98,6 +99,7 @@ const config = {
         disableSwitch: false
       },
     }),
+
 };
 
 export default config;

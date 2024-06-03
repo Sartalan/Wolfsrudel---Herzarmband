@@ -1,0 +1,14 @@
+.GanntContainer {
+    padding: 2.5rem 4rem;
+    border-radius: 1.25rem;
+    background-color: #181921;
+    overflow: hidden;
+}
+
+.GanntText {
+    text-align: center;
+    font-weight: 300;
+    font-family: Butterscotch;
+    font-size: 3rem;
+    padding: 1rem;
+}
