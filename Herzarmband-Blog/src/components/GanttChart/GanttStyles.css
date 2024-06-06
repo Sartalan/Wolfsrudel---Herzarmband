@@ -12,3 +12,7 @@
     font-size: 3rem;
     padding: 1rem;
 }
+
+.GanttDiv > div {
+    overflow: hidden !important;
+}
