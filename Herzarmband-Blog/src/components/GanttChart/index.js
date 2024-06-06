@@ -81,7 +81,7 @@ export default function GanttChart() {
                         console.log(task, progress, "progress")
                     }
                     onTasksChange={tasks => console.log(tasks, "tasks")}
-                    viewMode='Week'
+                    viewMode='Month'
 
                 />
             </div>
