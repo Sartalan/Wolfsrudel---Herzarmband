@@ -13,6 +13,6 @@
     padding: 1rem;
 }
 
-#GanttDiv > div {
+.GanttDiv > div {
     overflow: hidden !important;
 }
