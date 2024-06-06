@@ -77,7 +77,7 @@ export default function GanttChart() {
         <div className='GanntContainer'>
             <hr />
             <h1 className='GanntText'>Seguimiento del Proyecto</h1>
-            <div className='GanttDiv'>
+            <div id='GanttDiv'>
                 <FrappeGantt
                     tasks={tasks}
                     // viewMode={this.state.mode}

@@ -45,10 +45,3 @@ export const IconsListOne = [
   
   ];
   
-  export const IconsListThree = [
-
-  
-   
-  
-
-  ]
