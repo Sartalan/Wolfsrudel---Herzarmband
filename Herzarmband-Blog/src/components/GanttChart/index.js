@@ -21,53 +21,45 @@ export default function GanttChart() {
             start: project_begin,
             end: project_end,
             progress: 100,
-            dependencies: "S.1 , S.2 , S.3",
+            dependencies: "PCB",
+        },
+        {
+            id: "PCB",
+            name: "PCB",
+            start: '2024-04-22',
+            end: '2024-06-1',
+            progress: 100
+            // dependencies: "Task 2, Task 1"
+        },
+        {
+            id: "Model",
+            name: "3D Model",
+            start: '2024-05-25',
+            end: '2024-07-15',
+            progress: 100
+            // dependencies: "Task 2, Task 1"
         },
         {
             id: "Software",
             name: "Software",
             start: project_begin,
             end: project_end,
-            progress: 100
-            // dependencies: "Task 1"
+            progress: 100,
+            dependencies: "App, Code"
         },
         {
-            id: "S.1",
-            name: "Añadir Logo al Display",
+            id: "App",
+            name: "App",
             start: '2024-04-22',
-            end: '2024-04-28',
+            end: '2024-06-15',
             progress: 100
             // dependencies: "Task 2, Task 1"
         },
         {
-            id: "S.2",
-            name: "Testeo del Carrousel",
+            id: "Code",
+            name: "Code",
             start: '2024-04-24',
-            end: '2024-04-30',
-            progress: 100
-            // dependencies: "Task 2, Task 1"
-        },
-        {
-            id: "S.3",
-            name: "Testeo del Botón",
-            start: '2024-04-30',
-            end: '2024-05-2',
-            progress: 100
-            // dependencies: "Task 2, Task 1"
-        },
-        {
-            id: "Task 3",
-            name: "Redesign website",
-            start: new Date(),
-            end: d4,
-            progress: 100
-            // dependencies: "Task 2, Task 1"
-        },
-        {
-            id: "Task 3",
-            name: "Redesign website",
-            start: new Date(),
-            end: d4,
+            end: '2024-07-1',
             progress: 100
             // dependencies: "Task 2, Task 1"
         },
@@ -89,7 +81,7 @@ export default function GanttChart() {
                         console.log(task, progress, "progress")
                     }
                     onTasksChange={tasks => console.log(tasks, "tasks")}
-                    viewMode='Month'
+                    viewMode='Week'
 
                 />
             </div>
